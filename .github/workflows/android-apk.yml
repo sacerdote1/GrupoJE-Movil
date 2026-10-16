@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - name: Extract project
@@ -11,11 +11,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: sudo apt-get update && sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev
+      - run: sudo apt-get update && sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
       - run: python -m pip install --upgrade pip buildozer cython==0.29.36
       - name: Build APK
-        run: PROJECT_DIR=$(dirname "$(find extracted -name buildozer.spec -print -quit)") && cd "$PROJECT_DIR" && buildozer android debug
+        run: PROJECT_DIR=$(dirname "$(find extracted -name buildozer.spec -print -quit)") && sed -i 's/^android.api.*/android.api = 35/; s/^android.ndk.*/android.ndk = 25b/' "$PROJECT_DIR/buildozer.spec" && cd "$PROJECT_DIR" && buildozer android debug
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: GrupoJE-Android
           path: extracted/**/bin/*.apk
