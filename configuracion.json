@@ -1,0 +1,67 @@
+{
+    "empresa": {
+        "nombre": "Grupo JE",
+        "nit": "0614-281026-101-8",
+        "telefono": "+503 1234-5678",
+        "correo": "grupojesoporte@gmail.com",
+        "direccion": "San Salvador, El Salvador",
+        "eslogan": "Excelencia sobre ruedas",
+        "logo": "C:/Users/4976673_clases/Pictures/Screenshots/Captura de pantalla 2026-07-17 073008.png"
+    },
+    "facturacion": {
+        "prefijo": "F-",
+        "serie": "000145",
+        "numero_inicial": "000001",
+        "formato_fecha": "DD/MM/YYYY",
+        "moneda": "USD - Dólares",
+        "iva": "13",
+        "incluir_iva": true,
+        "tipo_pago": "Contado",
+        "vencimiento": "0"
+    },
+    "sistema": {
+        "inicio_automatico": false,
+        "recordar_usuario": true,
+        "actualizaciones": true,
+        "notificaciones": true,
+        "respaldos": true,
+        "tema": "Azul grisáceo",
+        "idioma": "English",
+        "carpeta_backup": "Backups",
+        "frecuencia_backup": "Semanal",
+        "hora_backup": "02:00 AM"
+    },
+    "impresion": {
+        "impresora": "Microsoft Print to PDF",
+        "papel": "Oficio",
+        "margenes": "Normal",
+        "copias": "1",
+        "vista_previa": true,
+        "imprimir_logo": true
+    },
+    "usuarios": [],
+    "base_datos": {
+        "motor": "MySQL",
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "",
+        "database": "sistema_ventas_vehiculos",
+        "connection_timeout": 3,
+        "sqlite_path": "C:\\Users\\4976673_clases\\Desktop\\Proyecto\\database\\grupo_je.db"
+    },
+    "seguridad": {
+        "codigo_expira_minutos": 10,
+        "max_intentos_codigo": 5,
+        "max_intentos_login": 5,
+        "bloqueo_minutos": 15
+    },
+    "correo_smtp": {
+        "servidor": "",
+        "puerto": 587,
+        "usuario": "",
+        "remitente": "",
+        "tls": true,
+        "ssl": false
+    }
+}

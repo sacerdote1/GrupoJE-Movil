@@ -1,0 +1,24 @@
+GRUPO JE MOVIL
+===============
+
+Esta es una copia independiente de la vista movil de Grupo JE.
+
+Para abrirla, ejecuta:
+  INICIAR_GRUPO_JE_MOVIL.cmd
+
+La carpeta incluye:
+  - La interfaz movil.
+  - Imagenes y fotografias de vehiculos.
+  - Una copia de consulta de la base SQLite.
+  - Los servicios necesarios para iniciar sesion y solicitar/cancelar reservas.
+
+La copia protege el sistema principal: las consultas son de solo lectura y sus
+imagenes/datos no dependen de estar conectada a Internet.
+
+Funciones propias de esta vista movil:
+  - Bienvenida animada por fotogramas con una fotografia real del catalogo.
+  - Favoritos guardados solo en el dispositivo.
+  - Comparador temporal de hasta dos vehiculos.
+  - Simulador de cuota informativo.
+
+No se crean ventas ni se ajusta inventario desde esta aplicacion.
